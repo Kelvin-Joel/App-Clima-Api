@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+    <div class="columna m-auto mt-4">
+        <form class="form-control mt-2">
+            <img src="img/logo.png" class="logo d-block m-auto" alt="">
+            <h1 class=" text-center mb-4">OpenWeathermap</h1>
+            <div class="form-control">
+                <label class="mb-2">Ingrese Pais : </label>
+                <input type="text" class="form-control mb-3" id="input_text">
+                <button class="btn btn-primary" id="btn_search">Search</button>
+            </div>
+        </form>
+        <div class="rounded information_clima border text-white  d-flex justify-content-center align-items-center">
+            <div id="conte_information" class="box_clima_information p-2 fs-6"></div>
+            <div class="conte_termometro">
+                <p id="temp_number" class="fw-bold text-center fs-3 text-white">0°c</p>
+                <div class="body">
+                    <div class="indicador" id="indicador">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                </div>
+                <div class="circle">
+                    <div class="circle_child" id="circle_termometro">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <template id="template_information">
+        <img src="" alt="" class="icon mb-3 d-block m-auto">
+        <p class="description "></p>
+        <p class="nombre "></p>
+        <p><span id="temp_min" class="temp_min">10C</span><span class="temp_max">20C</span></p>
+        <p class="humidity"></p>
+
+    </template>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="Js/app.js"></script>
+</body>
+
+</html>
